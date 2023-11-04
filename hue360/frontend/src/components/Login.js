@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/login.css'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   return (
@@ -11,13 +12,13 @@ export default function Login() {
       <div class="row">
         <div class="col-sm-6 col-md-7 intro-section">
           <div class="brand-wrapper">
-            <h1><a href="https://stackfindover.com/">Logo</a></h1>
+            <h1><a href="#!">Logo</a></h1>
           </div>
           <div class="intro-content-wrapper">
-            <h1 class="intro-title">Welcome to website !</h1>
+            <h1 class="intro-title">Welcome to Hue360 !</h1>
             <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna</p>
-            <a href="#!" class="btn btn-read-more">Read more</a>
+            <Link to="/" class="btn btn-read-more">Read more</Link>
           </div>
           <div class="intro-section-footer">
             <na class="footer-nav">
@@ -40,11 +41,11 @@ export default function Login() {
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password" />
               </div>
               <div class="d-flex justify-content-between align-items-center mb-5">
-                  <input name="login" id="login" class="btn login-btn" type="button" value="Login" />
-                <a href="#!" class="forgot-password-link">ForgotPassword?</a>
+                 <Link to='/'> <input name="login" id="login" class="btn login-btn" type="button" value="Login" /></Link>
+                <a href="#!" class="forgot-password-link">Forgot Password?</a>
               </div>
             </form>           
-            <p class="login-wrapper-footer-text">Need an account? <a href="#!" class="text-reset">Signup here</a></p>
+            <p class="login-wrapper-footer-text">Need an account? <a href="#!" class="text-reset">Sign-up here</a></p>
           </div>
         </div>
       </div>
