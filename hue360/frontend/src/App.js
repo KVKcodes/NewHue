@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Login from './components/Login';
 import { useLocation } from 'react-router-dom'
 import Register from './components/Register';
+import ForgotPassword from './components/LandingComponents/ForgotPassword';
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,9 @@ function App() {
     else if (location.pathname === '/register') {
       import('./css/register.css');
     }
+    else if(location.pathname=== '/ForgotPassword'){
+      import('./css/Forgot.css');
+    }
   };
 
   getCSSImports();
@@ -31,8 +35,9 @@ function App() {
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/ForgotPassword' element={<ForgotPassword/>} />
       </Routes>
-      <span>{location.pathname}</span>
+      {/* <span>{location.pathname}</span> */}
     </div>
   );
 }

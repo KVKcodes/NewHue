@@ -42,7 +42,8 @@ export default function Login() {
               </div>
               <div class="d-flex justify-content-between align-items-center mb-5">
                  <Link to='/'> <input name="login" id="login" class="btn login-btn" type="button" value="Login" /></Link>
-                <a href="#!" class="forgot-password-link">Forgot Password?</a>
+                <Link to="/ForgotPassword" class="forgot-password-link">Forgot Password?</Link>
+               
               </div>
             </form>           
             <p class="login-wrapper-footer-text">Need an account? <a href="#!" class="text-reset">Sign-up here</a></p>
