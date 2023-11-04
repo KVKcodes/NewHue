@@ -3,8 +3,12 @@ import Landing from './components/Landing';
 import { Routes, Route } from 'react-router-dom'
 import Login from './components/Login';
 import { useLocation } from 'react-router-dom'
+<<<<<<< HEAD
 import Register from './components/Register';
 import ForgotPassword from './components/LandingComponents/ForgotPassword';
+=======
+import Register from './components/Register'
+>>>>>>> d17d4003bb5c2a547b55665af35b8b42334d7e1a
 
 function App() {
   const location = useLocation();
