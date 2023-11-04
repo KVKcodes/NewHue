@@ -3,7 +3,7 @@ import Landing from './components/Landing';
 import { Routes, Route } from 'react-router-dom'
 import Login from './components/Login';
 import { useLocation } from 'react-router-dom'
-import Register from './components/Register';
+import Register from './components/Register'
 
 function App() {
   const location = useLocation();
