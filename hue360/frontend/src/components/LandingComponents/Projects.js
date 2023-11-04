@@ -1,7 +1,7 @@
 import React from 'react'
-import LastSupper from '../assets/paintings/the-last-supper.jpg'
-import Persistance from '../assets/paintings/persistance-of-memory.jpg'
-import StarryNight from '../assets/paintings/starry-night.jpg'
+import LastSupper from '../../assets/paintings/the-last-supper.jpg'
+import Persistance from '../../assets/paintings/persistance-of-memory.jpg'
+import StarryNight from '../../assets/paintings/starry-night.jpg'
 
 export default function Projects() {
   return (
@@ -14,20 +14,20 @@ export default function Projects() {
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src={LastSupper} alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                            <h4>Last Supper</h4>
+                            <p class="text-black-50 mb-0">One of the most iconic and revered artworks in the world, is a masterpiece painted by the Italian Renaissance genius Leonardo da Vinci. Captures the poignant moment when Jesus Christ reveals that one of his disciples will betray him during their final meal together.</p>
                         </div>
                     </div>
                 </div>
                 {/* <!-- Project One Row--> */}
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src={Persistance} alt="..." /></div>
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center"> 
+                    <div class="col-lg-6 contain-this"><img class="img-fluid" src={Persistance} alt="..." /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Misty</h4>
-                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                                    <h4 class="text-white">Persistance of Memory</h4>
+                                    <p class="mb-0 text-white-50">This is an iconic surrealist painting created by the renowned Spanish artist Salvador Dalí. Completed in 1931, this artwork is famous for its dreamlike and almost hallucinatory quality. Time itself appears to be in a state of flux, as the soft, drooping watches symbolize the fluidity and subjective nature of time.</p>
                                 </div>
                             </div>
                         </div>
@@ -40,8 +40,8 @@ export default function Projects() {
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Mountains</h4>
-                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
+                                    <h4 class="text-white">Starry Night</h4>
+                                    <p class="mb-0 text-white-50">is a breathtaking masterpiece of post-impressionist art painted by the Dutch artist Vincent van Gogh. Becoming one of the most celebrated and recognizable works in the history of art.</p>
                                 </div>
                             </div>
                         </div>

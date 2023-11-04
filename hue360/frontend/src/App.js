@@ -1,20 +1,38 @@
-import './App.css';
-import Masthead from './components/Masthead';
-import Navbar from './components/Navbar';
-import About from './components/About'
-import './css/styles.css'
-import Projects from './components/Projects';
-import Contactus from './components/Contactus';
+import Gallery from './components/Gallery';
+import Landing from './components/Landing';
+import { Routes, Route } from 'react-router-dom'
+import Login from './components/Login';
+import { useLocation } from 'react-router-dom'
+import Register from './components/Register';
 
 function App() {
+  const location = useLocation();
+
+  // Define CSS imports based on the current route
+  const getCSSImports = () => {
+    if (location.pathname === '/') {
+      import('./css/styles.css');
+    } else if (location.pathname === '/gallery') {
+      import('./css/shop_styles.css');
+    }
+    else if (location.pathname === '/login') {
+      import('./css/login.css');
+    }
+    else if (location.pathname === '/register') {
+      import('./css/register.css');
+    }
+  };
+
+  getCSSImports();
   return (
     <div className="App">
-      <Navbar/>
-      <Masthead/>
-      <About/>
-      <Projects/>
-      <Contactus/>
-      <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
+      <Routes>
+        <Route path='/' element={<Landing />} />
+        <Route path='/gallery' element={<Gallery />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+      </Routes>
+      <span>{location.pathname}</span>
     </div>
   );
 }

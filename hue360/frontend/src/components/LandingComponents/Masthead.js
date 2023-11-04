@@ -1,6 +1,25 @@
-import React from 'react'
+import { useEffect } from 'react'
+import $ from 'jquery';
 
 export default function Masthead() {
+    useEffect(() => {
+
+        $('a.btn').on('click', function (e) {
+          e.preventDefault();
+    
+          const targetId = $(this).attr('href');
+    
+          $('html, body').animate(
+            {
+              scrollTop: $(targetId).offset().top,
+            },
+            100,
+            'linear'
+          );
+        });
+    
+      }, []);
+      
   return (
     <div>
         <header class="masthead">
