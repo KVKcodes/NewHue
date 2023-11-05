@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './auth';
 // import hue360 from '../assets/img/hue350.png'
 
 export default function Register() {
@@ -12,17 +13,22 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [repass, setRepass] = useState("");
+  const auth= useAuth();
   const handleOnSubmit = (e) => {
       e.preventDefault();
     if(name.length!==1||email.length!==1||pass.length!==1||repass.length!==1){
     if(pass===repass){
       if(pass.length>7){
-        axios.post('http://localhost:3000/register', {name, email, pass})
+        axios.post('http://localhost:8000/registerCheck', {email})
           .then(result => {
             if(result.data==="exist"){
               alert("This email has already been registered")
             }
             else{
+              // axios.post('http://localhost:8000/register', {name, email, pass}).then(res=>{next('/')}).catch(err=>console.log(err))
+              axios.post('http://localhost:8000/register', {name, email, pass})
+              auth.login(name)
+              auth.logmail(email)
               next("/");
             }
           })
@@ -65,7 +71,7 @@ export default function Register() {
             <h1 class="intro-title">Welcome to Hue360!</h1>
             <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna</p>
-            <Link to="/" class="btn btn-read-more">Read more</Link>
+            <Link to="" class="btn btn-read-more">Read more</Link>
           </div>
           <div class="intro-section-footer">
             <na class="footer-nav">

@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import { useAuth } from '../auth'
 
 // window.addEventListener('DOMContentLoaded', event => {
 
@@ -51,6 +52,9 @@ import { Link } from 'react-router-dom'
 // });  
 
 export default function Navbar() {
+  const auth = useAuth(); 
+  console.log(auth.user)
+
   useEffect(() => {
 
     $('a.nav-link' && 'a.nav-a').on('click', function (e) {
@@ -89,7 +93,7 @@ export default function Navbar() {
     <div>
       <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
-          <a class="navbar-brand" href="#page-top">Start coloring</a>
+          <a class="navbar-brand" href="#page-top">{auth.user ? <span>Welcome, {auth.user} </span>: <span>Start coloring</span>}</a>
           <button
             class="navbar-toggler navbar-toggler-right"
             type="button"
@@ -126,7 +130,7 @@ export default function Navbar() {
               </li>
               <li class="nav-item">
                 <Link class="nav-link" to="login">
-                    Logout
+                {auth.user ? <span>Logout</span> : <span>Login</span>}
                 </Link>
               </li>
               

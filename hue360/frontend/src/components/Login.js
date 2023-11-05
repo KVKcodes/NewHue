@@ -3,14 +3,48 @@ import '../css/login.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from './auth';
 // import hue360 from '../assets/img/hue350.png'
 
 export default function Login() {
+  const next= useNavigate();
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const auth= useAuth();
+  auth.logout()
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post('http://localhost:8000/loginCheck', { email, pass });
+
+      if (response.data === "fal") {
+        alert("Wrong password");
+      } else {
+        // Assuming the response contains user information, pass it to login
+        auth.login(response.data);
+        auth.logmail(email)
+        console.log(email+"atLogin")
+        next("/");
+      }
+    } catch (error) {
+      console.log(error);
+      alert("An error occurred while logging in");
+    }
+  };
+
   const handleOnSubmit = (e) => {
       e.preventDefault();
-      axios.post('http://localhost:3000/login', {email, pass}).then(result => console.log(result)).catch(err=>console.log(err))
+      axios.post('http://localhost:8000/registerCheck', {email})
+        .then(result => {
+          console.log("registerCheck" + result.data)
+          if(result.data==="exist"){
+            handleLogin();
+          }
+          else {
+            alert("The given mail is not registered")
+          }
+        })
+        .catch(err=>console.log(err))
       setEmail("")
       setPass("")
 }
@@ -31,7 +65,7 @@ export default function Login() {
             <h1 class="intro-title">Welcome to Hue360!</h1>
             <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna</p>
-            <Link to="/" class="btn btn-read-more">Read more</Link>
+            <Link to="" class="btn btn-read-more">Read more</Link>
           </div>
           <div class="intro-section-footer">
             <na class="footer-nav">
@@ -54,7 +88,7 @@ export default function Login() {
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password" value={pass} onChange={(e) => setPass(e.target.value)}/>
               </div>
               <div class="d-flex justify-content-between align-items-center mb-5">
-                 <Link to='/'> <input name="login" id="login" class="btn login-btn" type="button" value="Login" /></Link>
+                 <Link to='/'> <input name="login" id="login" class="btn login-btn" type="button" value="Login" onClick={handleOnSubmit}/></Link>
                 <Link to="/ForgotPassword" class="forgot-password-link">Forgot Password?</Link>
                
               </div>

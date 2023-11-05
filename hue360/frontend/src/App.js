@@ -3,12 +3,10 @@ import Landing from './components/Landing';
 import { Routes, Route } from 'react-router-dom'
 import Login from './components/Login';
 import { useLocation } from 'react-router-dom'
-<<<<<<< HEAD
 import Register from './components/Register';
 import ForgotPassword from './components/LandingComponents/ForgotPassword';
-=======
-import Register from './components/Register'
->>>>>>> d17d4003bb5c2a547b55665af35b8b42334d7e1a
+import { AuthProvider } from './components/auth';
+
 
 function App() {
   const location = useLocation();
@@ -34,6 +32,7 @@ function App() {
   getCSSImports();
   return (
     <div className="App">
+      <AuthProvider>
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/gallery' element={<Gallery />} />
@@ -41,6 +40,7 @@ function App() {
         <Route path='/register' element={<Register />} />
         <Route path='/ForgotPassword' element={<ForgotPassword/>} />
       </Routes>
+      </AuthProvider>
       {/* <span>{location.pathname}</span> */}
     </div>
   );
