@@ -4,9 +4,12 @@ import Masthead from './LandingComponents/Masthead'
 import About from './LandingComponents/About'
 import Projects from './LandingComponents/Projects'
 import Contactus from './LandingComponents/Contactus'
-// import '../css/styles.css'
+import { useAuth } from "./auth";
+import '../css/styles.css'
 
 export default function Landing() {
+  const auth= useAuth()
+  auth.currentPage("/")
   return (
     <div>
       <Navbar />

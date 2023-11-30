@@ -6,6 +6,7 @@ export default function ShoppingGallery2() {
     const recipientEmail = auth.mail;
     const user = auth.user;
 
+
     const handleMail = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8000/buyMail', {user, recipientEmail})

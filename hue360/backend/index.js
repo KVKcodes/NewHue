@@ -3,7 +3,14 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const ProductModel = require('./models/Users')
 const nodemailer = require("nodemailer");
-
+const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    auth: {
+      user: "sidduultralegend@gmail.com",
+      pass: "lqrs vhpx amrc ujvm",
+    },
+  });
 
 const app = express()
 app.use(express.json())
@@ -27,16 +34,10 @@ app.post('/registerCheck', async (req, res) => {
 
 
 app.post('/buyMail', async (req, res) => {
+    console.log("reg stared")
     const {email}= req.body;
+
     try {
-        const transporter = nodemailer.createTransport({
-            host: "smtp.gmail.com",
-            port: 465,
-            auth: {
-              user: "sidduultralegend@gmail.com",
-              pass: "knuv bumj czlo eybj",
-            },
-          });
           const info = await transporter.sendMail({
             from: 'sidduultralegend@gmail.com', // sender address
             to: email, // list of receivers
@@ -45,7 +46,7 @@ app.post('/buyMail', async (req, res) => {
             html: "<b>Purchase confirmed</b>", // html body
           });
           console.log("info",info);
-          res.json(users,info);
+          res.status(200).json(users,info);
 
     } catch (error) {
         console.log(error);
@@ -71,27 +72,30 @@ app.post('/loginCheck', async (req, res) => {
 })
 
 app.post('/register',async (req, res) => {
+    const {name,email,pass}= req.body
+    const username = String(name);
     const users = await ProductModel.create(req.body);
-    const {email}= req.body;
+    console.log(req.body);
     console.log("reg stared")
         try {
-            const transporter = nodemailer.createTransport({
-                host: "smtp.gmail.com",
-                port: 465,
-                auth: {
-                  user: "sidduultralegend@gmail.com",
-                  pass: "knuv bumj czlo eybj",
-                },
-              });
+            //     transporter = nodemailer.createTransport({
+            //     host: "smtp.gmail.com",
+            //     port: 465,
+            //     auth: {
+            //       user: "sidduultralegend@gmail.com",
+            //       pass: "lqrs vhpx amrc ujvm",
+            //     },
+            //   });
               const info = await transporter.sendMail({
                 from: 'sidduultralegend@gmail.com', // sender address
                 to: email, // list of receivers
-                subject: "Greetings!", // Subject line
+                subject: "Successfully registered to Hue360!", // Subject line
                 text: "You've successfully been registered to Hue360. Get ready to immerse yourself in a world of art", // plain text body
-                html: "<b>Registration successful</b>", // html body
+                html: "<h1>Greetings, "+username+"</h1><b>You've been successfully registered as Hue360</b> <p>Get ready to immerse yourself in a world of art!</p><img src='https://openseauserdata.com/files/7d5d665f92c09858439458678bc879a4.gif' alt='nyan cat'/>", // html body
               });
               console.log("info",info);
-              res.json(users,info);
+              console.log(email);
+              res.status(200).json(users);
     
         } catch (error) {
             console.log(error);

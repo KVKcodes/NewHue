@@ -6,6 +6,7 @@ export default function ShoppingGallery() {
     const recipientEmail = auth.mail;
     const user = auth.user;
 
+    alert(recipientEmail+" "+user)
     const handleMail = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8000/buyMail', {user, recipientEmail}).then(res=>console.log("successful purchase")).catch(err=>console.log(err))
@@ -61,7 +62,7 @@ export default function ShoppingGallery() {
                             </div>
                             {/* <!-- Product actions--> */}
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#Cart">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -83,7 +84,7 @@ export default function ShoppingGallery() {
                             </div>
                             {/* <!-- Product actions--> */}
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#Cart">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -110,7 +111,7 @@ export default function ShoppingGallery() {
                             </div>
                             {/* <!-- Product actions--> */}
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#Cart">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -132,7 +133,7 @@ export default function ShoppingGallery() {
                             </div>
                             {/* <!-- Product actions--> */}
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#cart">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -151,7 +152,7 @@ export default function ShoppingGallery() {
                             </div>
                             {/* <!-- Product actions--> */}
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#Cart">View options</a></div>
                             </div>
                         </div>
                     </div>
@@ -181,7 +182,7 @@ export default function ShoppingGallery() {
                             </div>
                             {/* <!-- Product actions--> */}
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#Cart">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -208,7 +209,7 @@ export default function ShoppingGallery() {
                             </div>
                             {/* <!-- Product actions--> */}
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#Cart">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
