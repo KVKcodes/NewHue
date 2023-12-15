@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/NewHue/static/css/main.46da7cee.css",
+    "main.js": "/NewHue/static/js/main.b1424404.js",
+    "static/css/425.5d0949af.chunk.css": "/NewHue/static/css/425.5d0949af.chunk.css",
+    "static/js/425.f545be9d.chunk.js": "/NewHue/static/js/425.f545be9d.chunk.js",
+    "static/css/840.1e9eea7e.chunk.css": "/NewHue/static/css/840.1e9eea7e.chunk.css",
+    "static/js/840.4664f0fe.chunk.js": "/NewHue/static/js/840.4664f0fe.chunk.js",
+    "static/css/654.8ea4814b.chunk.css": "/NewHue/static/css/654.8ea4814b.chunk.css",
+    "static/js/654.66b7e173.chunk.js": "/NewHue/static/js/654.66b7e173.chunk.js",
+    "static/css/394.bc828dc3.chunk.css": "/NewHue/static/css/394.bc828dc3.chunk.css",
+    "static/js/394.6b07a267.chunk.js": "/NewHue/static/js/394.6b07a267.chunk.js",
+    "static/js/787.17a9b7c3.chunk.js": "/NewHue/static/js/787.17a9b7c3.chunk.js",
+    "static/media/starry-night.jpg": "/NewHue/static/media/starry-night.dbaa57c4af3b21c0f51b.jpg",
+    "static/media/bg-masthead.jpg": "/NewHue/static/media/bg-masthead.988d06cd0f50185d16de.jpg",
+    "static/media/realCanvas.png": "/NewHue/static/media/realCanvas.80c72ae3224379a926cf.png",
+    "static/media/spaceboy.jpeg": "/NewHue/static/media/spaceboy.18c0feeef4905ac35025.jpeg",
+    "static/media/bg-signup.jpg": "/NewHue/static/media/bg-signup.d955860c0757f1ea4673.jpg",
+    "static/media/shopper.jpg": "/NewHue/static/media/shopper.5a242d3c7670f4539d0c.jpg",
+    "static/media/the-last-supper.jpg": "/NewHue/static/media/the-last-supper.ff80ac2d9be0f1cfcb8e.jpg",
+    "static/media/persistance-of-memory.jpg": "/NewHue/static/media/persistance-of-memory.c2e468993bb604dbab67.jpg",
+    "index.html": "/NewHue/index.html",
+    "main.46da7cee.css.map": "/NewHue/static/css/main.46da7cee.css.map",
+    "main.b1424404.js.map": "/NewHue/static/js/main.b1424404.js.map",
+    "425.5d0949af.chunk.css.map": "/NewHue/static/css/425.5d0949af.chunk.css.map",
+    "425.f545be9d.chunk.js.map": "/NewHue/static/js/425.f545be9d.chunk.js.map",
+    "840.1e9eea7e.chunk.css.map": "/NewHue/static/css/840.1e9eea7e.chunk.css.map",
+    "840.4664f0fe.chunk.js.map": "/NewHue/static/js/840.4664f0fe.chunk.js.map",
+    "654.8ea4814b.chunk.css.map": "/NewHue/static/css/654.8ea4814b.chunk.css.map",
+    "654.66b7e173.chunk.js.map": "/NewHue/static/js/654.66b7e173.chunk.js.map",
+    "394.bc828dc3.chunk.css.map": "/NewHue/static/css/394.bc828dc3.chunk.css.map",
+    "394.6b07a267.chunk.js.map": "/NewHue/static/js/394.6b07a267.chunk.js.map",
+    "787.17a9b7c3.chunk.js.map": "/NewHue/static/js/787.17a9b7c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46da7cee.css",
+    "static/js/main.b1424404.js"
+  ]
+}
