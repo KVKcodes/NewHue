@@ -1,22 +1,13 @@
-import { useAuth } from "../auth";
-import axios from 'axios'
-
 export default function ShoppingGallery() {
-    const auth= useAuth()
-    const recipientEmail = auth.mail;
-    const user = auth.user;
-
-    alert(recipientEmail+" "+user)
     const handleMail = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/buyMail', {user, recipientEmail}).then(res=>console.log("successful purchase")).catch(err=>console.log(err))
     }
 
   return (
     <div>
-              <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+              <section class="py-3">
+            <div class="container px-0 px-lg-0 mt-0">
+                <div class="row gx-0 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
                             {/* <!-- Product image--> */}

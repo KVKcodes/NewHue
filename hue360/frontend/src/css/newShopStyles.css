@@ -1,0 +1,35 @@
+/* .grid-container {
+    display: grid;
+    grid-template-columns: rem 45rem 45rem;
+    gap: 5rem;
+    margin-top: 6rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 6rem;
+    justify-content:space-between;
+}
+
+.grid-item {
+    padding: 50%;
+    outline: 2px solid #000;
+} */
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.grid-item { 
+    box-sizing: border-box;
+    width: 37.5%; /* Set the width to 25% for four items in a row; adjust as needed */
+    padding: -5px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display:block;
+  }

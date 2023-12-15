@@ -56,7 +56,11 @@ export default function Navbar() {
   console.log(auth.user)
 
   useEffect(() => {
-
+    
+    $('a.preventDefault').on('click', function (e) {
+      e.preventDefault();
+    });
+    
     $('a.nav-link' && 'a.nav-a').on('click', function (e) {
       e.preventDefault();
 
@@ -93,7 +97,7 @@ export default function Navbar() {
     <div>
       <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
-          <a class="navbar-brand" href="#mainNav">{auth.user ? <span>Welcome, {auth.user} </span>: <span>Start coloring</span>}</a>
+          <a class="navbar-brand preventDefault" href="#mainNav">{auth.user ? <span>Welcome, {auth.user} </span>: <span>Start coloring</span>}</a>
           <button
             class="navbar-toggler navbar-toggler-right"
             type="button"

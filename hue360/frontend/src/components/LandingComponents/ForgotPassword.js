@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     <div>
      <body>
         <div class="wrapper">
-            <div class="container">
+            <div class="Fcontainer">
             <div class="title-section">
              <h2 class="title">Reset Password</h2>
             <p class="para">enter your mail to send verification code</p> 

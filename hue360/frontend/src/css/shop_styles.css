@@ -10829,4 +10829,16 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+
+  /*mine*/
+  .grid-container {
+    display: grid;
+    grid: repeat(3, 80px);
+    gap: 50px;
+  }
+
+  .grid-item {
+    padding: 2rem;
+    outline: #000 1rem solid;
+  }
 }
